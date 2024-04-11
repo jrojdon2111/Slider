@@ -1,0 +1,422 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap')
+*{
+    margin: 0 auto;
+    padding: 10px;
+}
+
+body{
+    background: #fff9de;
+    font-family: "Dancing Script", cursive;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+    min-height: 70px;
+    background: #dccf93;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 60px;
+    width: 70px;
+}
+
+nav a{
+    font-weight: 600;
+    padding: 10px;
+text-decoration: none;
+color: black;
+}
+
+nav a:hover{
+    border-radius: 50%;
+    animation-name: hov;
+    animation-duration: 3s;
+}
+
+nav a:active{
+    color: bisque;
+    /* animation-name: act;
+    animation-duration: 3s; */
+}
+
+@keyframes hov{
+    0%{    background: rgb(193, 180, 180);
+    }
+    50%{    background: rgb(193, 180, 180);
+    }
+    100%{     background: rgb(197, 218, 165);
+
+    }
+}
+
+/* @keyframes act{
+    0%{
+        transform: translateY(0%);    
+    }
+    25%{
+        transform: translateY(3%);
+    }
+    50%{
+        transform: translateY(5%);
+    }
+    75%{
+        transform: translateY(7%);
+    }
+    100%{
+        transform: translateY(9%);
+    }
+} */
+
+h1{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 5%;
+}
+
+h2{
+    margin: 0 auto;
+    text-align: center;
+    margin: 2%;
+}
+
+
+/* Card */
+.card{
+width: 80%;
+margin: 0 auto;
+margin-top: 10%;
+display: grid;
+}
+
+.card1{
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.815);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    border-radius: 5%;
+    background:  #ffe4c2;
+}
+
+.card1-1 {
+width: 90%;
+margin: 10% auto;
+border-radius: 10px;
+}
+
+.card2{
+    margin-top: 10%;
+display: flex;
+gap: 10px;
+justify-content: space-between;
+align-items: center;
+height: 500px;
+    /* display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-rows: auto auto auto;
+    margin-top: 8%; */
+}
+
+
+.card2-1{
+    width: 100px;
+    aspect-ratio: 1;    
+    flex-shrink: 0;
+    align-self: flex-start;
+}
+
+.card2-2{
+    text-align: center;
+    border-radius: 5%;
+    background:  #feead2;
+    /* margin: 7% 4%; */
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.815);
+    align-self: center;
+}
+
+
+.card2-3{
+    width: 100px;
+    aspect-ratio: 1;    
+    flex-shrink: 0;
+    align-self: flex-end;
+}
+/* editar */
+/* card2{
+    position: relative;
+border: black solid 5px;
+   
+}
+.card2-1{
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.card2-3{
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.card2 img{
+    width: 100px;
+    } */
+/* editar */
+.card2-2 p{
+    margin-bottom: 5%;
+}
+
+/* .card2-2{
+    text-align: center;
+    border-radius: 5%;
+    background:  #feead2;
+    margin: 7% 4%;
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.815);
+} */
+
+ul{
+    list-style: none;
+    margin-top: 5%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+
+
+/* Lines */
+ .lines{
+display: inline-block;
+position: relative;
+color: rgb(96, 94, 94);
+}
+
+.lines::after, .lines::before{
+content: '';
+position: absolute;
+width: 120px;
+height: 2px;
+background-color: rgb(104, 104, 104);
+top: 0.6em;
+transform: scale(0);
+}
+
+.lines:hover::before, .lines:hover::after{
+    transition:all 0.4s ease-in;
+    transform: scale(1);
+
+}
+
+.lines::before{left: 250px;}
+.lines::after{right: 250px;} 
+
+
+/* Slider */
+.sliderContainer{
+    margin: 10%;
+    display: grid;
+}
+
+.slider{
+    position: relative;
+    }
+    
+    .slider .wrapper{
+        width: 60vw;
+        height: 75vh;
+        box-shadow: 10px 10px 10px 10px rgb(148, 64, 64);
+        margin: 5rem auto;
+        overflow: hidden;
+    }
+    
+    .slider .wrapperHolder{
+        display: grid;
+        grid-template-columns: repeat(6, 100%);
+        height: 100%;
+        width: 100%;
+        animation: slider 30s ease-in-out infinite;
+    }
+    
+    .slider #slider1{
+        background-image: url(fotosPrueba/apeasy.png);
+        background-size: cover;
+    }
+    
+    .slider #slider2{
+        background-image: url(fotosPrueba/banco.png);
+        background-size: cover;
+    }
+    
+    .slider #slider3{
+        background-image: url(fotosPrueba/corruption.png);
+        background-size: cover;
+    }
+    
+    .slider #slider4{
+        background-image: url(fotosPrueba/happyend.png);
+        background-size: cover;
+    }
+    
+    .slider #slider5{
+        background-image: url(fotosPrueba/maps.png);
+        background-size: cover;
+    }
+    
+    .slider #slider6{
+        background-image: url(fotosPrueba/mascara.png);
+        background-size: cover;
+    }
+    
+    .slider .buttonHolder .button{
+        background-color: white;
+        width: 15px;
+        height: 15px;
+        border-radius: 15px;
+        display: inline-block;
+        margin: .3rem;
+    }
+
+    .slider .buttonHolder{
+        position: absolute;
+        left: 45%;
+        bottom: 0%;
+    }
+    
+    #slider1, #slider2, #slider3, #slider4, #slider5, #slider6{
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+    }
+    
+    @keyframes slider{
+        0%{transform: translate(0%);}
+        10%{transform: translate(-100%);}
+        20%{transform: translate(-100%);}
+        30%{transform: translate(-200%);}
+        40%{transform: translate(-200%);}
+        50%{transform: translate(-200%);}
+        60%{transform: translate(-300%);}
+        70%{transform: translate(-400%);}
+        80%{transform: translate(-500%);}
+        90%{transform: translate(0%);}
+        100%{transform: translate(0%);}
+    }
+    
+    .button:hover{
+        box-shadow: 0px 0px 7px 4px rgb(134, 123, 123);
+    }
+
+.icons{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto auto;
+    place-items: center;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.icons img{
+    width: 80px;
+    height: 80px;
+    box-shadow: 5px 5px 5px 5px rgba(128, 128, 128, 0.815);
+    background-color: #ffe4c2;
+    transition: margin-right 2s ease-in-out .5s;
+
+}
+
+.icons img:hover{
+    /* transition: margin-right 2s ease-in-out .5s; */
+    animation-name: movement;
+    animation-duration: 2s;
+    animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement{
+    0%{transform: translate(0%); background: #ffe4c2;}
+    /* 10%{} */
+    20%{ background: #f9e4cc;}
+    /* 30%{}
+    40%{} */
+    50%{background: #f8ede0;}
+    /* 60%{}
+    70%{} */
+    80%{background: #faf5ee;}
+    /* 90%{} */
+    100%{transform: translate(100%);background: #ffffff;}
+}
+
+    @media (max-width:700px){
+        header{
+            flex-direction: column;
+        }
+        nav{padding: 10px;}
+
+        .slider .wrapper{
+            width: 60vw;
+            height: 60vh;
+        }
+        .icons img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+
+    @media screen and (max-width: 480px){
+        /* .card1,.card2{
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: auto;
+        } */
+.card2-1, .card2-3{
+    align-self: center;
+}
+        .slider .wrapper{
+            width: 60vw;
+            height: 50vh;
+            /* aspect-ratio: calc(4/3); */
+        }
+
+        .slider .buttonHolder .button{
+            display: grid;
+        }
+        .icons img{
+            width: 40px;
+            height: 40px;
+        }
+    }
+    
+    @media screen and (max-width: 1000px){
+        .card2{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+
+
+    
+.hola{
+    border: 90px solid;
+border-image-source: url('linea.png');
+border-image-slice: 60 60 60 60;
+border-image-repeat: stretch;
+border-image-repeat: round;
+border-image-width: 20px;
+background: red;
+width: 500px;
+}
